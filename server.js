@@ -90,4 +90,4 @@ app.use("/api/messages", messageRouter);
 
 //start the server
 const PORT = 5000;
-server.listen(PORT, console.log("Server is up and running on port", PORT));
+server.listen(PORT,'0.0.0.0', console.log("Server is up and running on port", PORT));
