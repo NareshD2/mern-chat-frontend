@@ -23,8 +23,9 @@ const io = socketio(server, {
 app.use(cors());
 app.use(express.json());
 //connect to db
-//mongoose.connect(process.env.MONGO_URL)
-mongoose.connect("mongodb+srv://naresh:qUuoLKKYU0wXL3PG@cluster1.euppa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1")
+
+//mongoose.connect("mongodb+srv://naresh:qUuoLKKYU0wXL3PG@cluster1.euppa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1")
+mongoose.connect(process.env.MONGO_URL)
 .then(() => {
   console.log('Connected to DB');
 })
